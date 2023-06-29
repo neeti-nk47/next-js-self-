@@ -52,7 +52,7 @@ export default function Home() {
       <button onClick={addTask}>Add Task</button>
 
       <div>
-        <h2>Active Tasks</h2>
+        <h2>Active Tasks:</h2>
         {tasks.map(
           (task) =>
             !task.completed && (
@@ -65,7 +65,7 @@ export default function Home() {
       </div>
 
       <div>
-        <h2>Completed Tasks</h2>
+        <h2>Completed Tasks:</h2>
         {tasks.map(
           (task) =>
             task.completed && (
