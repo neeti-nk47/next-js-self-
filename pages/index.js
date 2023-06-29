@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Link from "next/link";
 
 export default function Home() {
   const [task, setTask] = useState("");
@@ -68,7 +69,7 @@ export default function Home() {
             Add Task
           </button>
 
-          <div className="card p-3 mb-5 bg-tertiary">
+          <div className=" p-3 mb-5 ">
             <h2>Active Tasks:</h2>
             {tasks.map(
               (task) =>
@@ -94,16 +95,17 @@ export default function Home() {
             )}
           </div>
 
-          <div className="card p-3 mb-5 ">
+          <div className="p-3 mb-5 ">
             <h2>Completed Tasks:</h2>
-            {tasks.map(
+            {/* {tasks.map(
               (task) =>
                 task.completed && (
                   <ul className="list-group" key={task._id}>
                     <li className="list-group-item">{task.name}</li>
                   </ul>
                 )
-            )}
+            )}  */}
+            <Link href="/completed-task">View Completed Tasks</Link>
           </div>
         </div>
       </div>
